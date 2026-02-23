@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8RS9NJ7QQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q8RS9NJ7QQ');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FlowPalm</title>
+  <link rel="icon" type="image/x-icon" href="docs/assets/images/favicon.ico?v=2">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/buttons.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar is-white site-navbar" role="navigation" aria-label="main navigation">
+    <div class="container is-max-desktop">
+      <div class="navbar-brand">
+        <a class="navbar-item brand-name" href="#">
+          <i>FlowPalm</i>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#abstract">Abstract</a>
+          <a class="navbar-item" href="#method">Method</a>
+          <a class="navbar-item" href="#visualization">Visualization</a>
+          <a class="navbar-item" href="#BibTeX">BibTeX</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Hero / Title -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-2 publication-title">
+              <i>FlowPalm</i>: Optical Flow Driven Non-Rigid Deformation for Geometrically Diverse Palmprint Generation
+            </h1>
+
+            <!-- Conference badge -->
+            <div style="margin: 0.8rem 0 1.2rem;">
+              <span class="tag cvpr-badge">CVPR 2026</span>
+            </div>
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors" style="margin-bottom: 0.4rem;">
+              <span class="author-block" style="color: #4286f4">Yuchen Zou<sup>1</sup>,</span>
+              <span class="author-block" style="color: #4286f4">Huikai Shao<sup>1</sup>,</span>
+              <span class="author-block" style="color: #4286f4">Lihuang Fang<sup>2</sup>,</span>
+              <span class="author-block" style="color: #4286f4">Zhipeng Xiong<sup>1</sup>,</span>
+              <span class="author-block" style="color: #4286f4">Dexing Zhong<sup>1</sup></span>
+            </div>
+
+            <!-- Affiliations -->
+            <div class="is-size-6 publication-authors" style="color: #555; margin-bottom: 1.4rem;">
+              <sup>1</sup>&nbsp;Xi'an Jiaotong University
+              &emsp;
+              <sup>2</sup>&nbsp;Southern University of Science and Technology
+            </div>
+
+            <!-- Links -->
+            <div class="publication-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span style="text-decoration: line-through;">arXiv</span>
+                </span>
+              </span>
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span style="text-decoration: line-through;">Code</span>
+                </span>
+              </span>
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span style="text-decoration: line-through;">Paper</span>
+                </span>
+              </span>
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span style="text-decoration: line-through;">Video</span>
+                </span>
+              </span>
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="fas fa-image"></i></span>
+                  <span style="text-decoration: line-through;">Poster</span>
+                </span>
+              </span>
+
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark disabled-link">
+                  <span class="icon"><i class="fas fa-globe"></i></span>
+                  <span style="text-decoration: line-through;">Conference</span>
+                </span>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+
+  <!-- Teaser video -->
+  <section class="hero teaser" id="teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" autoplay controls muted loop style="width: 75%; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+          <source src="./docs/assets/videos/demo_comparison.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.2rem; line-height: 1.7;">
+          Comparison between <strong>Diff-Palm</strong> [1] and <strong>FlowPalm (Ours)</strong>.
+          Our FlowPalm is capable of generating palmprints with realistic and flexible geometric variations,
+          faithfully simulating the complex non-rigid deformations observed in real palms.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End Teaser video -->
+
+
+  <!-- Abstract -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-heading">Abstract</h2>
+          <div class="content has-text-justified abstract-text">
+            <p>
+              Recently, synthetic palmprints have been increasingly used as substitutes for real data to train
+              recognition models. To be effective, such synthetic data must reflect the diversity of real palmprints,
+              including both style variation and geometric variation. However, existing palmprint generation methods
+              mainly focus on style translation, while geometric variation is either ignored or approximated by simple
+              handcrafted augmentations. In this work, we propose FlowPalm, an optical-flow-driven palmprint generation
+              framework capable of simulating the complex non-rigid deformations observed in real palms. Specifically,
+              FlowPalm estimates optical flows between real palmprint pairs to capture the statistical patterns of
+              geometric deformations. Building on these priors, we design a progressive sampling process that gradually
+              introduces the geometric deformations during diffusion while maintaining identity consistency. Extensive
+              experiments on six benchmark datasets demonstrate that FlowPalm significantly outperforms state-of-the-art
+              palmprint generation approaches in downstream recognition tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Abstract -->
+
+
+  <!-- Method Overview -->
+  <section class="section hero is-small" id="method">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-3 section-heading">Method Overview</h2>
+            <img src="./docs/assets/images/deform_compare_poster.png" alt="Method Overview"
+                 style="width: 65%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" />
+            <p class="subtitle has-text-centered" style="margin-top: 1.4rem; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto;">
+              We introduce optical flow driven non-rigid deformation modeling to overcome the limitations of
+              handcrafted simple transformations, enabling the synthesis of geometrically diverse and
+              identity-consistent palmprints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Method Overview -->
+
+
+  <!-- Visualization Results -->
+  <section class="section hero is-small is-light" id="visualization">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+
+        <h2 class="title is-3 has-text-centered section-heading">Visualization Results</h2>
+        <p class="has-text-centered vis-desc">
+          We visualize the intermediate components of FlowPalm's generation pipeline alongside ablation studies
+          on warped crease and warped noise. Warping only the noise causes the principal lines to remain fixed,
+          while warping only the crease leaves fine texture details unaltered. By simultaneously warping both
+          the crease and the noise, <strong>Full Pipeline</strong> produces textures whose morphology
+          consistently follows the deformed structure.
+        </p>
+
+        <!-- Row 1: Full Pipeline -->
+        <div class="vis-row-header">
+          <span class="tag is-dark is-medium vis-row-tag">Full Pipeline</span>
+        </div>
+        <div class="columns is-variable is-1 is-vcentered vis-row">
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Deformation Flow</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Style Noise</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-orange">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_crease_after_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Warped Crease</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-blue">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Warped Noise</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-green">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/full.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Generated Palmprint</b></p>
+          </div>
+        </div>
+
+        <hr class="vis-divider">
+
+        <!-- Row 2: Ablation on Crease -->
+        <div class="vis-row-header">
+          <span class="tag is-warning is-medium vis-row-tag" style="color:#333;">Ablation: w/o Warped Crease</span>
+        </div>
+        <div class="columns is-variable is-1 is-vcentered vis-row">
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Deformation Flow</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Style Noise</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-red">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_crease_before_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label" style="color:#e74c3c;"><b>Crease (no warp)</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-blue">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Warped Noise</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-red">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/no_warp_crease.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label" style="color:#e74c3c;"><b>Result (no warp crease)</b></p>
+          </div>
+        </div>
+
+        <hr class="vis-divider">
+
+        <!-- Row 3: Ablation on Noise -->
+        <div class="vis-row-header">
+          <span class="tag is-info is-medium vis-row-tag">Ablation: w/o Warped Noise</span>
+        </div>
+        <div class="columns is-variable is-1 is-vcentered vis-row">
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Deformation Flow</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Style Noise</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-orange">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_crease_after_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label"><b>Warped Crease</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-red">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/vis_noise_before_warp.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label" style="color:#e74c3c;"><b>Fixed Noise (no warp)</b></p>
+          </div>
+          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column has-text-centered vis-highlight-red">
+            <video autoplay muted loop style="width:100%; border-radius:6px;">
+              <source src="./docs/assets/videos/0001-video/no_warp_noise.mp4" type="video/mp4">
+            </video>
+            <p class="vis-label" style="color:#e74c3c;"><b>Result (no warp noise)</b></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        function initRowSync() {
+          var rows = document.querySelectorAll('#visualization .columns.is-variable');
+          rows.forEach(function (row) {
+            var videos = Array.from(row.querySelectorAll('video'));
+            if (videos.length < 2) return;
+
+            var master = videos[0];
+            var slaves = videos.slice(1);
+
+            master.setAttribute('controls', '');
+
+            master.addEventListener('play', function () {
+              slaves.forEach(function (v) { v.play(); });
+            });
+            master.addEventListener('pause', function () {
+              slaves.forEach(function (v) { v.pause(); });
+            });
+            master.addEventListener('seeked', function () {
+              slaves.forEach(function (v) { v.currentTime = master.currentTime; });
+            });
+            master.addEventListener('timeupdate', function () {
+              slaves.forEach(function (v) {
+                if (Math.abs(v.currentTime - master.currentTime) > 0.08) {
+                  v.currentTime = master.currentTime;
+                }
+              });
+            });
+
+            var readyCount = 0;
+            function onReady() {
+              readyCount++;
+              if (readyCount === videos.length) {
+                videos.forEach(function (v) { v.currentTime = 0; });
+                slaves.forEach(function (v) { v.play(); });
+                master.play();
+              }
+            }
+            videos.forEach(function (v) {
+              v.pause();
+              if (v.readyState >= 3) {
+                onReady();
+              } else {
+                v.addEventListener('canplay', onReady, { once: true });
+              }
+            });
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initRowSync);
+        } else {
+          initRowSync();
+        }
+      })();
+    </script>
+  </section>
+  <!-- End Visualization Results -->
+
+
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title section-heading">BibTeX</h2>
+      <pre><code>@inproceedings{
+  zou2026flowpalm,
+  title={FlowPalm: Optical Flow Driven Non-Rigid Deformation for Geometrically Diverse Palmprint Generation},
+  author={Yuchen Zou and Huikai Shao and Lihuang Fang and Zhipeng Xiong and Dexing Zhong},
+  booktitle={Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
+  <!-- End BibTeX -->
+
+
+  <!-- References -->
+  <section class="section hero is-small is-light" id="ref">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-4 section-heading">References</h2>
+        <div class="content">
+          <p>
+            [1] J. Jin, C. Zhao, R. Zhang, S. Shang, J. Xu, J. Zhang, S. M. Wang, Y. Zhao, S. Ding, and W. Jia,
+            "Diff-palm: Realistic palmprint generation with polynomial creases and intra-class variation controllable
+            diffusion models," in <em>Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)</em>, 2025,
+            pp. 26367–26376.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End References -->
+
+
+  <!-- Footer -->
+  <footer class="footer site-footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2026 FlowPalm Team &nbsp;|&nbsp;
+        Page template adapted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Navbar burger toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var burger = document.querySelector('.navbar-burger');
+      var menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
