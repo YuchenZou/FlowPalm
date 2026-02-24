@@ -155,7 +155,7 @@
         <video poster="" autoplay controls muted loop style="width: 75%; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
           <source src="./docs/assets/videos/demo_comparison.mp4" type="video/mp4">
         </video>
-        <h2 class="subtitle has-text-centered" style="margin-top: 1.2rem; line-height: 1.7;">
+        <h2 class="has-text-centered" style="margin-top: 1.2rem; line-height: 1.7;">
           Comparison between <strong>Diff-Palm</strong> [1] and <strong>FlowPalm (Ours)</strong>.
           Our FlowPalm is capable of generating palmprints with realistic and flexible geometric variations,
           faithfully simulating the complex non-rigid deformations observed in real palms.
@@ -201,7 +201,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h2 class="title is-3 section-heading">Method Overview</h2>
-            <p class="subtitle has-text-centered" style="margin-top: 1.4rem; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <p style="margin-top: 1.4rem; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto; text-align: left;">
               We introduce optical flow driven non-rigid deformation modeling to overcome the limitations of
               handcrafted simple transformations, enabling the synthesis of geometrically diverse and
               identity-consistent palmprints.
@@ -222,7 +222,7 @@
       <div class="container is-max-desktop">
 
         <h2 class="title is-3 has-text-centered section-heading">Visualization Results</h2>
-        <p class="has-text-centered vis-desc">
+        <p class="vis-desc" style="text-align: left;">
           We visualize the intermediate components of FlowPalm's generation pipeline alongside ablation studies
           on warped crease and warped noise. Warping only the noise causes the principal lines to remain fixed,
           while warping only the crease leaves fine texture details unaltered. By simultaneously warping both
@@ -248,14 +248,17 @@
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-overlay"><span>⊕</span></div>
           <div class="column has-text-centered vis-highlight-orange">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_crease_after_warp.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Warped Crease</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-replace">
+            <span>→</span>
+            <small class="vis-op-label">replace@<br>t_mid</small>
+          </div>
           <div class="column has-text-centered vis-highlight-blue">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_noise_after_warp_opt.mp4" type="video/mp4">
@@ -291,14 +294,17 @@
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-overlay"><span>⊕</span></div>
           <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_crease_before_warp.mp4" type="video/mp4">
             </video>
             <p class="vis-label" style="color:#e74c3c;"><b>Crease (no warp)</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-replace">
+            <span>→</span>
+            <small class="vis-op-label">replace@<br>t_mid</small>
+          </div>
           <div class="column has-text-centered vis-highlight-blue">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_noise_after_warp_opt.mp4" type="video/mp4">
@@ -334,14 +340,17 @@
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-overlay"><span>⊕</span></div>
           <div class="column has-text-centered vis-highlight-orange">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_crease_after_warp.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Warped Crease</b></p>
           </div>
-          <div class="column is-narrow vis-arrow"><span>→</span></div>
+          <div class="column is-narrow vis-arrow vis-no-replace">
+            <span>→</span>
+            <small class="vis-op-label">replace@<br>t_mid</small>
+          </div>
           <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_noise_before_warp.mp4" type="video/mp4">

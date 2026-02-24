@@ -223,6 +223,29 @@ body {
   color: #64748b;
 }
 
+.vis-replace,
+.vis-no-replace {
+  flex-direction: column;
+  gap: 0.08rem;
+  line-height: 1;
+}
+
+.vis-op-label {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #64748b;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.vis-arrow span {
+  color: #8b95a7;
+  font-size: 1.22rem;
+  font-weight: 700;
+}
+
 #visualization .section-heading {
   display: table;
   margin-left: auto !important;
