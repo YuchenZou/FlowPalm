@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=2">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -201,13 +201,13 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h2 class="title is-3 section-heading">Method Overview</h2>
-            <img src="./docs/assets/images/deform_compare_poster.png" alt="Method Overview"
-                 style="width: 65%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" />
             <p class="subtitle has-text-centered" style="margin-top: 1.4rem; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto;">
               We introduce optical flow driven non-rigid deformation modeling to overcome the limitations of
               handcrafted simple transformations, enabling the synthesis of geometrically diverse and
               identity-consistent palmprints.
             </p>
+            <img src="./docs/assets/images/deform_compare_poster.png" alt="Method Overview"
+                 style="display: block; width: 72%; max-width: 900px; margin: 1.1rem auto 0; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" />
           </div>
         </div>
       </div>
@@ -231,10 +231,10 @@
         </p>
 
         <!-- Row 1: Full Pipeline -->
-        <div class="vis-row-header">
+        <div class="vis-row-header vis-row-header-full">
           <span class="tag is-dark is-medium vis-row-tag">Full Pipeline</span>
         </div>
-        <div class="columns is-variable is-1 is-vcentered vis-row">
+        <div class="columns is-variable is-1 is-vcentered vis-row vis-row-full">
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
@@ -244,7 +244,7 @@
           <div class="column is-narrow vis-arrow"><span>→</span></div>
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
-              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+              <source src="./docs/assets/videos/0001-video/vis_start_t_opt.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
@@ -258,7 +258,7 @@
           <div class="column is-narrow vis-arrow"><span>→</span></div>
           <div class="column has-text-centered vis-highlight-blue">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
-              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp.mp4" type="video/mp4">
+              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp_opt.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Warped Noise</b></p>
           </div>
@@ -274,10 +274,10 @@
         <hr class="vis-divider">
 
         <!-- Row 2: Ablation on Crease -->
-        <div class="vis-row-header">
-          <span class="tag is-warning is-medium vis-row-tag" style="color:#333;">Ablation: w/o Warped Crease</span>
+        <div class="vis-row-header vis-row-header-ablation">
+          <span class="tag is-warning is-medium vis-row-tag vis-row-tag-ablation">Ablation: w/o Warped Crease</span>
         </div>
-        <div class="columns is-variable is-1 is-vcentered vis-row">
+        <div class="columns is-variable is-1 is-vcentered vis-row vis-row-ablation">
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
@@ -287,12 +287,12 @@
           <div class="column is-narrow vis-arrow"><span>→</span></div>
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
-              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+              <source src="./docs/assets/videos/0001-video/vis_start_t_opt.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
           <div class="column is-narrow vis-arrow"><span>→</span></div>
-          <div class="column has-text-centered vis-highlight-red">
+          <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_crease_before_warp.mp4" type="video/mp4">
             </video>
@@ -301,12 +301,12 @@
           <div class="column is-narrow vis-arrow"><span>→</span></div>
           <div class="column has-text-centered vis-highlight-blue">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
-              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp.mp4" type="video/mp4">
+              <source src="./docs/assets/videos/0001-video/vis_noise_after_warp_opt.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Warped Noise</b></p>
           </div>
           <div class="column is-narrow vis-arrow"><span>→</span></div>
-          <div class="column has-text-centered vis-highlight-red">
+          <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/no_warp_crease.mp4" type="video/mp4">
             </video>
@@ -317,10 +317,10 @@
         <hr class="vis-divider">
 
         <!-- Row 3: Ablation on Noise -->
-        <div class="vis-row-header">
-          <span class="tag is-info is-medium vis-row-tag">Ablation: w/o Warped Noise</span>
+        <div class="vis-row-header vis-row-header-ablation">
+          <span class="tag is-info is-medium vis-row-tag vis-row-tag-ablation">Ablation: w/o Warped Noise</span>
         </div>
-        <div class="columns is-variable is-1 is-vcentered vis-row">
+        <div class="columns is-variable is-1 is-vcentered vis-row vis-row-ablation">
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_flow.mp4" type="video/mp4">
@@ -330,7 +330,7 @@
           <div class="column is-narrow vis-arrow"><span>→</span></div>
           <div class="column has-text-centered">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
-              <source src="./docs/assets/videos/0001-video/vis_start_t.mp4" type="video/mp4">
+              <source src="./docs/assets/videos/0001-video/vis_start_t_opt.mp4" type="video/mp4">
             </video>
             <p class="vis-label"><b>Style Noise</b></p>
           </div>
@@ -342,14 +342,14 @@
             <p class="vis-label"><b>Warped Crease</b></p>
           </div>
           <div class="column is-narrow vis-arrow"><span>→</span></div>
-          <div class="column has-text-centered vis-highlight-red">
+          <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/vis_noise_before_warp.mp4" type="video/mp4">
             </video>
             <p class="vis-label" style="color:#e74c3c;"><b>Fixed Noise (no warp)</b></p>
           </div>
           <div class="column is-narrow vis-arrow"><span>→</span></div>
-          <div class="column has-text-centered vis-highlight-red">
+          <div class="column has-text-centered vis-highlight-red vis-ablation-focus">
             <video autoplay muted loop style="width:100%; border-radius:6px;">
               <source src="./docs/assets/videos/0001-video/no_warp_noise.mp4" type="video/mp4">
             </video>
